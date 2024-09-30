@@ -18,12 +18,11 @@ body {
     padding: 20px;
 }
 
-/* Section Title */
 h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 2.5rem;
-    color: #ff4500; /* Flash Orange */
+    color: #ff4500; 
     text-transform: uppercase;
 }
 .process-intro {
@@ -53,7 +52,6 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* Process vs Program Section */
 .process-program-section {
     margin-bottom: 50px;
 }
@@ -82,13 +80,12 @@ h1 {
     border-radius: 5px;
 }
 
-/* Labels for Process and Program */
 .label-left,
 .label-right {
     position: absolute;
     bottom: 10px;
     padding: 10px;
-    background-color: rgba(255, 69, 0, 0.9); /* Flash Orange with transparency */
+    background-color: rgba(255, 69, 0, 0.9); 
     color: white;
     font-size: 1rem;
     border-radius: 3px;
@@ -109,7 +106,7 @@ h1 {
     font-weight: bold;
 }
 
-/* CPU and Flash Section */
+
 .cpu-flash-section .content-box {
     display: flex;
     gap: 20px;
@@ -148,7 +145,6 @@ h1 {
     font-weight: normal;
 }
 
-/* Programm Logical Counter Section */
 .programm-logical-counter .content-box {
     display: flex;
     gap: 20px;
@@ -167,16 +163,16 @@ h1 {
     border-radius: 10px;
 
 }
-/* process model */
+
 .process_model {
-    margin: 50px 0; /* Add spacing above and below the section */
+    margin: 50px 0; 
 }
 
 .model_images {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    border: 2px solid #ff4500; /* Flash Orange border */
+    border: 2px solid #ff4500; 
 }
 
 .content-box {
@@ -196,7 +192,7 @@ h1 {
 
 .text-section h1 {
     font-size: 2rem;
-    color: #ff4500; /* Flash Orange */
+    color: #ff4500; 
     margin-bottom: 10px;
 }
 
@@ -207,7 +203,7 @@ h1 {
     font-weight: normal;
 }
 .process-methods {
-    margin: 50px 0; /* Add spacing above and below the section */
+    margin: 50px 0; 
     padding: 20px;
     background-color: #fff;
     border:2px solid #ddd;
@@ -215,7 +211,7 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .process-termination{
-    margin: 50px 0; /* Add spacing above and below the section */
+    margin: 50px 0; 
     padding: 20px;
     background-color: #fff;
     border: 2px solid #ddd;
@@ -224,30 +220,30 @@ h1 {
 }
 table {
     width: 100%;
-    border-collapse: collapse; /* Combine borders */
-    margin-top: 20px; /* Space above the table */
+    border-collapse: collapse; 
+    margin-top: 20px; 
 }
 
 th, td {
-    border: 1px solid #ccc; /* Light border for table cells */
+    border: 1px solid #ccc;
     padding: 10px;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
 }
 
 th {
-    background-color: #ff4500; /* Flash Orange for header */
-    color: white; /* White text for header */
+    background-color: #ff4500;
+    color: white; 
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9; /* Light grey background for even rows */
+    background-color: #f9f9f9; 
 }
 
 tr:hover {
-    background-color: #f1f1f1; /* Change color on hover */
+    background-color: #f1f1f1;
 }
 
-/* Responsiveness */
+
 @media (max-width: 768px) {
     .image-container,
     .content-box {
