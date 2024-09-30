@@ -1,0 +1,269 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Title */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #ff4500; /* Flash Orange */
+    text-transform: uppercase;
+}
+.process-intro {
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.process-intro h1 {
+    font-size: 2em;
+    color: #ff4500;
+}
+
+.process-intro p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.process-intro ol {
+    padding-left: 20px;
+}
+
+.process-intro li {
+    margin-bottom: 10px;
+}
+
+/* Process vs Program Section */
+.process-program-section {
+    margin-bottom: 50px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.image-box {
+    flex: 1;
+    position: relative;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-box:hover {
+    transform: scale(1.05);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Labels for Process and Program */
+.label-left,
+.label-right {
+    position: absolute;
+    bottom: 10px;
+    padding: 10px;
+    background-color: rgba(255, 69, 0, 0.9); /* Flash Orange with transparency */
+    color: white;
+    font-size: 1rem;
+    border-radius: 3px;
+}
+
+.label-left {
+    left: 10px;
+}
+
+.label-right {
+    right: 10px;
+    text-align: right;
+}
+
+.image-box p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* CPU and Flash Section */
+.cpu-flash-section .content-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-section {
+    flex: 1;
+}
+
+.flash-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-section {
+    flex: 1;
+}
+
+.text-section h1 {
+    font-size: 2rem;
+    color: #ff4500;
+    margin-bottom: 10px;
+}
+
+.text-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    font-weight: normal;
+}
+
+/* Programm Logical Counter Section */
+.programm-logical-counter .content-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.counter-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}
+/* process model */
+.process_model {
+    margin: 50px 0; /* Add spacing above and below the section */
+}
+
+.model_images {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ff4500; /* Flash Orange border */
+}
+
+.content-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-section {
+    flex: 1;
+}
+
+.text-section h1 {
+    font-size: 2rem;
+    color: #ff4500; /* Flash Orange */
+    margin-bottom: 10px;
+}
+
+.text-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    font-weight: normal;
+}
+.process-methods {
+    margin: 50px 0; /* Add spacing above and below the section */
+    padding: 20px;
+    background-color: #fff;
+    border:2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.process-termination{
+    margin: 50px 0; /* Add spacing above and below the section */
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+table {
+    width: 100%;
+    border-collapse: collapse; /* Combine borders */
+    margin-top: 20px; /* Space above the table */
+}
+
+th, td {
+    border: 1px solid #ccc; /* Light border for table cells */
+    padding: 10px;
+    text-align: left; /* Align text to the left */
+}
+
+th {
+    background-color: #ff4500; /* Flash Orange for header */
+    color: white; /* White text for header */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light grey background for even rows */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Change color on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .image-container,
+    .content-box {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .text-section p {
+        font-size: 1.1rem;
+    }
+
+    .label-left,
+    .label-right {
+        font-size: 0.9rem;
+    }
+}
