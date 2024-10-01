@@ -5,94 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Threading Concepts</title>
     <style>
-        body, html {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden; /* Prevents scrolling */
-        }
-        .slide {
-            display: none;
-            position: fixed; /* Ensure the slide fills the entire viewport */
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            text-align: center;
-            background-color: #ffffff;
-        }
-        .active {
-            display: block;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the image fills the screen while maintaining aspect ratio */
-        }
-        .nav {
-            position: fixed;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10; /* Keep navigation buttons above everything */
-        }
-        .nav button {
-            padding: 10px 20px;
-            margin: 0 5px;
-            font-size: 16px;
-            background-color: #2c3e50;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        .nav button:hover {
-            background-color: #34495e;
-        }
+        /* Navbar Styling */
+/* Navbar styling */
+.navbar {
+    background-color: #ffcc66; /* Brighter and happier color */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center; /* Center elements */
+    padding: 10px 0; /* Add some padding for breathing room */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
+}
+
+.navbar a {
+    display: inline-block; /* Make links inline block for centering */
+    color: #333; /* Dark text for contrast with bright background */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold; /* Make it a bit bolder */
+    transition: all 0.3s ease; /* Smooth hover transition */
+    border-radius: 20px; /* Soft rounded corners for a friendly look */
+    margin: 0 15px; /* Add space between the items */
+}
+
+.navbar a:hover {
+    background-color: #ff9933; /* Brighter hover effect */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+/* Styling for the rest of the content */
+.container {
+    margin-top: 70px; /* For fixed navbar space */
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* General body and html adjustments */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling, but allow vertical */
+}
+
+/* Slider container */
+.slide {
+    display: none;
+    position: fixed; /* Ensure the slide fills the entire viewport */
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: #ffffff;
+    z-index: 5; /* Ensure slides appear behind navigation buttons */
+}
+
+/* Show only active slide */
+.slide.active {
+    display: block;
+}
+
+/* Image styling */
+img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover; /* Ensures the image fills the screen while maintaining aspect ratio */
+}
+
+/* Navigation button styling */
+.nav {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Keep navigation buttons above everything */
+}
+
+/* Navigation button look and feel */
+.nav button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Add some roundness to the buttons */
+    transition: background-color 0.3s ease;
+}
+
+.nav button:hover {
+    background-color: #34495e;
+}
+
+/* Responsive navbar for small screens */
+@media screen and (max-width: 768px) {
+    .navbar a {
+        padding: 10px 15px; /* Reduce padding for smaller screens */
+        font-size: 16px; /* Adjust font size for smaller screens */
+        margin: 0 5px; /* Decrease margin between links */
+    }
+}
+
     </style>
 </head>
 <body>
-
-    <div class="slide active" id="slide0">
-        <div class="image-container">
-            <img src="1.jpg" alt="1">
+    <div class="navbar">
+        <a href="./index.html">Процесс</a>
+        <a href="./sub-process.html">Салбар процесс</a>
+        <a href="./synchro.html">Синхронжуулалт ба процесс доторх харилцаа</a>
+        <a href="./schedule.html">Хуваарилалт</a>
+    </div>
+    <div class="container">
+        <div class="slide active" id="slide0">
+            <div class="image-container">
+                <img src="1.jpg" alt="1">
+            </div>
+        </div>
+    
+        <div class="slide" id="slide1">
+            <div class="image-container">
+                <img src="2.jpg" alt="2">
+            </div>
+        </div>
+    
+        <div class="slide" id="slide2">
+            <div class="image-container">
+                <img src="3.jpg" alt="3">
+            </div>
+        </div>
+    
+        <div class="slide" id="slide3">
+            <div class="image-container">
+                <img src="4.jpg" alt="4">
+            </div>
+        </div>
+    
+        <div class="slide" id="slide4">
+            <div class="image-container">
+                <img src="5.jpg" alt="5">
+            </div>
+        </div>
+    
+        <div class="slide" id="slide5">
+            <div class="image-container">
+                <img src="6.jpg" alt="6">
+            </div>
+        </div>
+    
+        <div class="nav">
+            <button onclick="prevSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button>
         </div>
     </div>
-
-    <div class="slide" id="slide1">
-        <div class="image-container">
-            <img src="2.jpg" alt="2">
-        </div>
-    </div>
-
-    <div class="slide" id="slide2">
-        <div class="image-container">
-            <img src="3.jpg" alt="3">
-        </div>
-    </div>
-
-    <div class="slide" id="slide3">
-        <div class="image-container">
-            <img src="4.jpg" alt="4">
-        </div>
-    </div>
-
-    <div class="slide" id="slide4">
-        <div class="image-container">
-            <img src="5.jpg" alt="5">
-        </div>
-    </div>
-
-    <div class="slide" id="slide5">
-        <div class="image-container">
-            <img src="6.jpg" alt="6">
-        </div>
-    </div>
-
-    <div class="nav">
-        <button onclick="prevSlide()">Previous</button>
-        <button onclick="nextSlide()">Next</button>
-    </div>
+    
 
     <script>
         let currentSlide = 0;
