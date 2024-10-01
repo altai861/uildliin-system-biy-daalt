@@ -7,16 +7,63 @@
 }
 
 body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #ffcc66; /* Brighter and happier color */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center; /* Center elements */
+    padding: 10px 0; /* Add some padding for breathing room */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
+}
+
+.navbar a {
+    display: inline-block; /* Make links inline block for centering */
+    color: #333; /* Dark text for contrast with bright background */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold; /* Make it a bit bolder */
+    transition: all 0.3s ease; /* Smooth hover transition */
+    border-radius: 20px; /* Soft rounded corners for a friendly look */
+    margin: 0 15px; /* Add space between the items */
+}
+
+.navbar a:hover {
+    background-color: #ff9933; /* Brighter hover effect */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+/* Styling for the rest of the content */
+.container {
+    margin-top: 70px; /* For fixed navbar space */
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+
 
 /* Section Title */
 h1 {
