@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хуваарилалт</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        /* Navbar styling */
+      .navbar {
+        background-color: #ffcc66; /* Brighter and happier color */
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        text-align: center; /* Center elements */
+        padding: 10px 0; /* Add some padding for breathing room */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
+    }
+
+    .navbar a {
+        display: inline-block; /* Make links inline block for centering */
+        color: #333; /* Dark text for contrast with bright background */
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold; /* Make it a bit bolder */
+        transition: all 0.3s ease; /* Smooth hover transition */
+        border-radius: 20px; /* Soft rounded corners for a friendly look */
+        margin: 0 15px; /* Add space between the items */
+    }
+
+    .navbar a:hover {
+        background-color: #ff9933; /* Brighter hover effect */
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+    }
+        /* Styling for the rest of the content */
+        .container {
+            margin-top: 70px; /* For fixed navbar space */
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+header {
+    background-color: #0066cc;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #0066cc;
+}
+
+p, ul, li {
+    margin: 0 0 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+figure figcaption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="./index.html">Процесс</a>
+        <a href="./sub-process.html">Салбар процесс</a>
+        <a href="./synchro.html">Синхронжуулалт ба процесс доторх харилцаа</a>
+        <a href="./schedule.html">Хуваарилалт</a>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Хуваарилалт</h1>
+        </header>
+    
+        <section>
+            <p>
+                Хэрэв компьютер мулти-программчлагдсан бол ихэвчлэн олон тооны процессууд болон дэд процессууд CPU-ийг ажиллуулахын тулд нэгэн зэрэг дайрдаг. Үүнээс үүдэн CPU аль процессыг түрүүлж ажиллуулах гэдэг сонголтыг хийх ёстой болдог. Үүнийг хийдэг үйлдлийн системийн хэсгийг <strong>хуваарь гаргагч</strong> (scheduler) гэж нэрлэдэг. Харин үүний ашигладаг алгоритмыг <strong>хуваарьлалтын алгоритм</strong> (scheduling algorithm) гэж нэрлэдэг.
+            </p>
+    
+            <p>
+                Сүүлийн үед хувийн компьютеруудын хувьд гарсан ахиц дэвшлээс үүдэн 2 төрлийн өөрчлөлт гарсан.
+            </p>
+    
+            <ul>
+                <li>Ихэнх тохиолдолд компьютерт ганц идэвхтэй процесс ажиллаж байдаг.</li>
+                <li>Сүүлийн жилүүдэд CPU илүү хүчтэй, хурдан болсоор байгаа.</li>
+            </ul>
+    
+            <p>
+                Аль процессийг эхлээд ажиллуулах вэ гэдэг дээр нэмээд хуваарилагч нь CPU-г хэрхэн ашигтай ажиллуулах вэ гэдэг дээр санаа тавих ёстой. Учир нь процессуудын хооронд шилжих нь маш тооцооллын хувьд маш үнэтэй үйлдэл байдаг.
+            </p>
+    
+            <figure>
+                <img src="./pics/scheduling_CPU_bursts.jpg" alt="CPU-ийн ажиллах хугацаа оролт гаралтын хугацаатай харьцуулалт">
+                <figcaption>CPU-ийн ажиллах хугацаа оролт гаралтын хугацаатай харьцуулалт</figcaption>
+            </figure>
+    
+            <h2>Хуваарилалт хийх шалтгаанууд</h2>
+            <ul>
+                <li>Шинэ процесс үүсэх үед.</li>
+                <li>Процесс дуусах үед.</li>
+                <li>Процесс оролт гаралтыг хүлээн блоклогдох үед.</li>
+                <li>Оролт гаралтын сааталт үүсэх үед.</li>
+            </ul>
+    
+            <h2>Хуваарилалтын алгоритмын төрлүүд</h2>
+            <ul>
+                <li>Batch</li>
+                <li>Interactive</li>
+                <li>Real-time</li>
+            </ul>
+    
+            <h2>Batch системийн хуваарилалт</h2>
+            <h3>First-Come, First-Served</h3>
+            <p>
+                Энэ алгоритм нь хамгийн энгийн алгоритм юм. Ерөнхийдөө бэлэн процессуудыг хадгалж буй нэг queue байгаа ба FIFO зарчмаар процессуудыг ажиллуулна.
+            </p>
+    
+            <h3>Shortest Job First</h3>
+            <p>
+                Энэ алгоритмыг ашигласнаар дундаж ажлын дуусах хугацаа хамгийн бага болдог байна.
+            </p>
+    
+            <h2>Интерактив системийн хуваарилалт</h2>
+            <h3>Round-Robin хуваарилалт</h3>
+            <p>
+                Round-Robin алгоритм нь хамгийн их ашиглагддаг ба процесс бүр <em>quantum</em> гэж нэрлэгдэх хугацааг л гарсан боломжиндоо авах бөгөөд хугацаандаа амжихгүй бол дарааллын хамгийн сүүл рүү ордог.
+            </p>
+            <figure>
+                <img src="./pics/round-robin-working.jpg" alt="Round-robin хуваарилалт">
+                <figcaption>Round-robin хуваарилалт</figcaption>
+            </figure>
+    
+            <h3>Priority хуваарилалт</h3>
+            <p>
+                Энэхүү алгоритм нь аливаа процессуудыг хэр чухал вэ гэдгээр нь эрэмбэлэн ажиллуулдаг алгоритм юм.
+            </p>
+            <figure>
+                <img src="./pics/priority-scheduling-class.jpg" alt="Priority хуваарилалт болон round-robin хуваарилалт">
+                <figcaption>Priority хуваарилалт болон round-robin хуваарилалт хосолсон байдал</figcaption>
+            </figure>
+    
+        </section>
+    </div>
+
+    
+
+</body>
+</html>
